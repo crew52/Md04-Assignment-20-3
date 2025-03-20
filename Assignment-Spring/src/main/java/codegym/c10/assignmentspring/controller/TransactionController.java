@@ -61,4 +61,15 @@ public class TransactionController {
                 ? ResponseEntity.noContent().build()
                 : ResponseEntity.ok(computers);
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Transaction> deleteCustomer(@PathVariable Long id) {
+        Optional<Transaction> transactionOptional = transactionService.findById(id);
+        if (!transactionOptional.isPresent()) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        transactionService.remove(id);
+        return new ResponseEntity<>(transactionOptional.get(), HttpStatus.OK);
+    }
+
 }

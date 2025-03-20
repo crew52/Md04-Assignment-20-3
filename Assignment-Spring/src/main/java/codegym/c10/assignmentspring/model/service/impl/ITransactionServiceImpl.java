@@ -57,6 +57,7 @@ public class ITransactionServiceImpl implements ITransactionService {
 
     @Override
     public void remove(Long id) {
+        iTransactionRepository.deleteById(id);
     }
 
     private void validateTransaction(Transaction transaction) {
