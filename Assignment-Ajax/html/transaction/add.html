@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Transaction</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../../css/transaction/add.css">
+</head>
+<body>
+
+<h2>Add New Transaction</h2>
+
+<form id="addTransactionForm">
+    <label for="transactionId">Code:</label>
+    <input type="text" id="transactionId" name="transactionId" required>
+
+    <label for="transactionDate">Date:</label>
+    <input type="text" id="transactionDate" name="transactionDate" required>
+
+    <label for="serviceType">Type:</label>
+    <select id="serviceType" name="serviceType">
+        <option value="Land">Land</option>
+        <option value="House and Land">House and Land</option>
+    </select>
+
+    <label for="unitPrice">Price:</label>
+    <input type="number" id="unitPrice" name="unitPrice" required>
+
+    <label for="area">Area:</label>
+    <input type="number" id="area" name="area" required>
+
+    <label for="customerId">Customer:</label>
+    <select id="customerId" name="customerId" required>
+        <option value="">Loading customers...</option>
+    </select>
+
+    <button type="submit">Add Transaction</button>
+    <button type="button" onclick="window.history.back()">Cancel</button>
+</form>
+
+<script src="../../js/transaction/add.js"></script>
+
+</body>
+</html>
+

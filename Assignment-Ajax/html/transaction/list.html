@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer List</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../../css/transaction/list.css">
+</head>
+<body>
+<button onclick="window.location.href='add.html'">Add New Product</button>
+
+<h2>Transaction List</h2>
+
+<label for="searchSelect">Search Type:</label>
+<select id="searchSelect">
+    <option value="">-- Select Type --</option>
+    <option value="Land">Land</option>
+    <option value="House and Land">House and Land</option>
+</select>
+<button id="searchButton">Search</button>
+
+
+<label for="pageSize">Page Size:</label>
+<select id="pageSize">
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="5" selected>5</option>
+    <option value="10">10</option>
+</select>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Code</th>
+        <th>Date</th>
+        <th>Type</th>
+        <th>Price</th>
+        <th>area</th>
+        <th>Customer Name</th>
+        <th>Actions</th> <!-- Thêm cột Actions -->
+    </tr>
+    </thead>
+    <tbody id="transactionTableBody">
+    <!-- Data will be inserted here -->
+    </tbody>
+</table>
+
+
+<button id="prevPage">Previous</button>
+<span id="pageInfo"></span>
+<button id="nextPage">Next</button>
+
+<script src="../../js/transaction/list.js"></script>
+
+</body>
+</html>
